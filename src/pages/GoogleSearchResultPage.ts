@@ -5,8 +5,5 @@ export class GoogleSearchResultPage extends BasePage {
     searchContents: '//div[@id="search"]'
   };
 
-  public waitFor = () => {
-    this.browser.waitForElementVisible(this.selectors.searchContents, 2000);
-    return this;
-  };
+  protected pageLoadedElement = this.selectors.searchContents;
 }

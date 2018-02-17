@@ -8,8 +8,11 @@ module.exports = {
     const indexPage = new GoogleIndexPage(browser);
     const resultPage = new GoogleSearchResultPage(browser);
 
-    indexPage.open().search('nightwatch');
-    resultPage.waitFor();
+    indexPage
+      .navigate()
+      .waitForLoad()
+      .search('nightwatch');
+    resultPage.waitForLoad();
     browser.assert.containsText(resultPage.selectors.searchContents, 'Nightwatch.js').end();
   },
 
@@ -17,8 +20,11 @@ module.exports = {
     const googleIndexPage = new GoogleIndexPage(browser);
     const nightwatchWebsitePage = new NightwachWebsitePage(browser);
 
-    googleIndexPage.open().goodLuck('nightwatch');
-    nightwatchWebsitePage.waitFor();
+    googleIndexPage
+      .navigate()
+      .waitForLoad()
+      .goodLuck('nightwatch');
+    nightwatchWebsitePage.waitForLoad();
     browser.assert.containsText(nightwatchWebsitePage.selectors.body, 'Nightwatch.js').end();
   }
 };

@@ -5,8 +5,5 @@ export class NightwachWebsitePage extends BasePage {
     body: '//body'
   };
 
-  public waitFor = () => {
-    this.browser.waitForElementVisible(this.selectors.body, 2000);
-    return this;
-  };
+  protected pageLoadedElement = this.selectors.body;
 }

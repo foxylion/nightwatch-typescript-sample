@@ -7,10 +7,8 @@ export class GoogleIndexPage extends BasePage {
     goodLuckButton: '//input[@name="btnI"]'
   };
 
-  public open = () => {
-    this.browser.url('http://google.com').waitForElementPresent('//body', 1000);
-    return this;
-  };
+  protected url = 'https://google.com';
+  protected pageLoadedElement = '//body';
 
   public search = (query: string) => {
     this.browser
