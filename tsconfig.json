@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./build",
+    "module": "esnext",
+    "target": "es6",
+    "lib": ["es6"],
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "rootDir": "./src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "inlineSourceMap": true
+  },
+  "exclude": ["node_modules", "build"]
+}
